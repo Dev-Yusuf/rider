@@ -4,7 +4,7 @@ const DriverSelection = ({ onSelectDriver }) => {
     const drivers = [
         {
             id: 1,
-            name: 'Michael',
+            name: 'David',
             image: '/driver_a.png',
             rating: 4.9,
             car: 'Toyota Camry (Black)',
@@ -12,7 +12,7 @@ const DriverSelection = ({ onSelectDriver }) => {
         },
         {
             id: 2,
-            name: 'Sarah',
+            name: 'Emily',
             image: '/driver_b.png',
             rating: 4.95,
             car: 'Honda Accord (Silver)',

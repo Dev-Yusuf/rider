@@ -9,7 +9,7 @@ const BookingForm = ({ onBook }) => {
     e.preventDefault();
     if (pickup && dropoff) {
       // Fixed price calculation
-      const price = tripType === 'single' ? '80.00' : '160.00';
+      const price = tripType === 'single' ? '45.00' : '90.00';
       onBook({ pickup, dropoff, tripType, price });
     }
   };
@@ -65,7 +65,7 @@ const BookingForm = ({ onBook }) => {
           <div style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
             <p style={{ color: '#666', marginBottom: '5px' }}>Total Fare</p>
             <div style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--primary-color)' }}>
-              ${tripType === 'single' ? '80.00' : '160.00'}
+              ${tripType === 'single' ? '45.00' : '90.00'}
             </div>
           </div>
         )}
