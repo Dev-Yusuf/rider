@@ -52,7 +52,7 @@ function App() {
   return (
     <div className="app-container">
       <header className="app-header">
-        <h1>Rider</h1>
+        <h1>OmniRide</h1>
       </header>
 
       <main className="main-content">
@@ -66,7 +66,7 @@ function App() {
 
         {view === 'searching' && (
           <div className="card" style={{ textAlign: 'center' }}>
-            <div className="loader" style={{ fontSize: '2rem', marginBottom: '1rem' }}>Finding Drivers...</div>
+            <div className="ring-spinner"></div>
             <p>Matching you with top-rated drivers nearby...</p>
           </div>
         )}

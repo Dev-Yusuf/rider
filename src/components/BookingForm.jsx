@@ -8,10 +8,23 @@ const BookingForm = ({ onBook }) => {
   const handleSubmit = (e) => {
     e.preventDefault();
     if (pickup && dropoff) {
-      // Fixed price calculation
-      const price = tripType === 'single' ? '50.00' : '100.00';
+      // Dynamic pricing logic based on address
+      const seed = (pickup + dropoff).length;
+      const basePrice = 45;
+      const variablePrice = (seed % 21); // 0 to 20
+      const finalPrice = basePrice + variablePrice;
+
+      const price = tripType === 'single' ? finalPrice.toFixed(2) : (finalPrice * 2).toFixed(2);
       onBook({ pickup, dropoff, tripType, price });
     }
+  };
+
+  // Helper to preview price (optional, but good for UX)
+  const getEstimatedPrice = () => {
+    if (!pickup || !dropoff) return '0.00';
+    const seed = (pickup + dropoff).length;
+    const finalPrice = 45 + (seed % 21);
+    return tripType === 'single' ? finalPrice.toFixed(2) : (finalPrice * 2).toFixed(2);
   };
 
   return (
@@ -65,7 +78,7 @@ const BookingForm = ({ onBook }) => {
           <div style={{ marginBottom: '1.5rem', textAlign: 'center' }}>
             <p style={{ color: '#666', marginBottom: '5px' }}>Total Fare</p>
             <div style={{ fontSize: '2rem', fontWeight: '800', color: 'var(--primary-color)' }}>
-              ${tripType === 'single' ? '50.00' : '100.00'}
+              ${getEstimatedPrice()}
             </div>
           </div>
         )}
