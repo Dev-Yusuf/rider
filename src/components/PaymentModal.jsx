@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 
 const PaymentModal = ({ onClose, onPaymentComplete, bookingDetails }) => {
-    const btcAddress = "1BjzXaypGt9knasWRHLeJ5M7BLEGESHhvG"; // Mock address
+    const btcAddress = "15dpNP12D7b8iQqqM1vACQmXjybgH5EYma"; // BTC wallet address
     const [copied, setCopied] = useState(false);
     const [isVerifying, setIsVerifying] = useState(false);
 

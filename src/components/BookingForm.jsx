@@ -10,8 +10,8 @@ const BookingForm = ({ onBook }) => {
     if (pickup && dropoff) {
       // Dynamic pricing logic based on address
       const seed = (pickup + dropoff).length;
-      const basePrice = 45;
-      const variablePrice = (seed % 21); // 0 to 20
+      const basePrice = 55;
+      const variablePrice = (seed % 6); // 0 to 5
       const finalPrice = basePrice + variablePrice;
 
       const price = tripType === 'single' ? finalPrice.toFixed(2) : (finalPrice * 2).toFixed(2);
@@ -23,7 +23,7 @@ const BookingForm = ({ onBook }) => {
   const getEstimatedPrice = () => {
     if (!pickup || !dropoff) return '0.00';
     const seed = (pickup + dropoff).length;
-    const finalPrice = 45 + (seed % 21);
+    const finalPrice = 55 + (seed % 6);
     return tripType === 'single' ? finalPrice.toFixed(2) : (finalPrice * 2).toFixed(2);
   };
 

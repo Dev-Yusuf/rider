@@ -29,6 +29,16 @@ const DriverSelection = ({ onSelectDriver }) => {
                 },
                 {
                     id: 3,
+                    name: 'Marcus',
+                    image: 'https://randomuser.me/api/portraits/men/32.jpg',
+                    rating: 4.93,
+                    trips: '3,200 trips',
+                    car: 'BMW 7 Series',
+                    carColor: 'Black',
+                    status: 'available'
+                },
+                {
+                    id: 4,
                     name: 'Chloe',
                     image: 'https://randomuser.me/api/portraits/women/68.jpg',
                     rating: 4.90,
@@ -38,13 +48,23 @@ const DriverSelection = ({ onSelectDriver }) => {
                     status: 'available'
                 },
                 {
-                    id: 4,
+                    id: 5,
+                    name: 'Daniel',
+                    image: 'https://randomuser.me/api/portraits/men/45.jpg',
+                    rating: 4.91,
+                    trips: '1,600 trips',
+                    car: 'Audi A6',
+                    carColor: 'Gray',
+                    status: 'available'
+                },
+                {
+                    id: 6,
                     name: 'Michelle',
                     image: 'https://randomuser.me/api/portraits/women/33.jpg',
                     rating: 4.88,
                     trips: '3,100 trips',
-                    car: 'BMW 7 Series',
-                    carColor: 'Black',
+                    car: 'Mercedes-Benz E-Class',
+                    carColor: 'White',
                     status: 'busy'
                 }
             ];
