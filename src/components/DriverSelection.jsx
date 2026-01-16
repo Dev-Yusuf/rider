@@ -15,7 +15,7 @@ const DriverSelection = ({ onSelectDriver }) => {
                     trips: '2,400 trips',
                     car: 'Mercedes-Benz S-Class',
                     carColor: 'Black',
-                    status: 'available'
+                    status: 'busy'
                 },
                 {
                     id: 2,
@@ -25,7 +25,7 @@ const DriverSelection = ({ onSelectDriver }) => {
                     trips: '1,850 trips',
                     car: 'Audi A8',
                     carColor: 'Silver',
-                    status: 'available'
+                    status: 'busy'
                 },
                 {
                     id: 3,
@@ -45,7 +45,7 @@ const DriverSelection = ({ onSelectDriver }) => {
                     trips: '900 trips',
                     car: 'Lexus LS',
                     carColor: 'White',
-                    status: 'available'
+                    status: 'busy'
                 },
                 {
                     id: 5,
